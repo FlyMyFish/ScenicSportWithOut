@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ScenicSport</string>
+    <string name="sports_str">景点</string>
+    <string name="load_more_str">加载更多</string>
+</resources>

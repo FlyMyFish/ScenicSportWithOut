@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="ToolBarHeight">45dp</dimen>
+    <dimen name="TextToLeftSlide">12dp</dimen>
+    <dimen name="TextToRightSlide">12dp</dimen>
+    <dimen name="SortItemHeight">38dp</dimen>
+    <dimen name="TextSizeValue">13dp</dimen>
+    <dimen name="TextSizeDes">15dp</dimen>
+</resources>
