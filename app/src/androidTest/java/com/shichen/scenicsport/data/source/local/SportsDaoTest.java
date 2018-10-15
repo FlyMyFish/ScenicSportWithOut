@@ -25,7 +25,8 @@ public class SportsDaoTest {
 
     @Before
     public void initDb(){
-        mDatabase= Room.inMemoryDatabaseBuilder(InstrumentationRegistry.getContext(),ScenicSportDatabase.class).build();
+        mDatabase= Room.inMemoryDatabaseBuilder(InstrumentationRegistry.getContext(),
+                ScenicSportDatabase.class).build();
     }
 
     @After

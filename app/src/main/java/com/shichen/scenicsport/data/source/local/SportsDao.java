@@ -13,23 +13,24 @@ import java.util.List;
 
 @Dao
 public interface SportsDao {
-    @Query("SELECT * FROM SPORTS")
+    @Query(value = "SELECT * FROM SPORTS")
     List<Sport> getAll();
-    @Query("SELECT * FROM SPORTS WHERE des LIKE '%'+:keyword+'%' LIMIT (:curPage -1)*10,10 ")
+
+    @Query(value = "SELECT * FROM SPORTS WHERE des LIKE '%'+:keyword+'%' LIMIT (:curPage -1)*10,10 ")
     List<Sport> getSports(String curPage, String keyword);
 
-    @Query("SELECT * FROM SPORTS WHERE entryid=:param_value")
-    Sport getSportByParamValue(@NonNull String param_value);
+    @Query(value = "SELECT * FROM SPORTS WHERE entryid = :param_value")
+    Sport getSportByParamValue(String param_value);
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    void insertSport(@NonNull Sport sport);
+    void insertSport(Sport sport);
 
-    @Update
-    int updataSport(@NonNull Sport sport);
+    @Update(onConflict = OnConflictStrategy.REPLACE)
+    int updataSport(Sport sport);
 
-    @Query("DELETE FROM SPORTS WHERE entryid=:param_value")
-    int deleteSportByParamValue(@NonNull String param_value);
+    @Query(value = "DELETE FROM SPORTS WHERE entryid=:param_value")
+    int deleteSportByParamValue(String param_value);
 
-    @Query("DELETE FROM SPORTS")
+    @Query(value = "DELETE FROM SPORTS")
     void deleteSports();
 }

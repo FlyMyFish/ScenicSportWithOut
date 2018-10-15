@@ -16,7 +16,7 @@ public abstract class ScenicSportDatabase extends RoomDatabase {
 
     private static final Object sLock = new Object();
 
-    public static ScenicSportDatabase getInstence(@NonNull Context context) {
+    public static ScenicSportDatabase getInstance(@NonNull Context context) {
         synchronized (sLock) {
             if (INSTANCE == null) {
                 INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
